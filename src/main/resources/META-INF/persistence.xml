@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="1.0">
+
+	<persistence-unit name="application" transaction-type="RESOURCE_LOCAL">
+
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.ejb.event.post-insert"
+				value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.post-update"
+				value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.post-delete"
+				value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.pre-collection-update"
+				value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.pre-collection-remove"
+				value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.post-collection-recreate"
+				value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="org.hibernate.envers.store_data_at_delete"
+				value="true" />
+		</properties>
+
+		<class>com.impetus.ankush.common.domain.Node</class>
+		<class>com.impetus.ankush.common.domain.Cluster</class>
+		<class>com.impetus.ankush.common.domain.Tile</class>
+		<class>com.impetus.ankush.common.domain.Log</class>
+		<class>com.impetus.ankush.common.domain.User</class>
+		<class>com.impetus.ankush.common.domain.Role</class>
+		<class>com.impetus.ankush.common.domain.NodeMonitoring</class>
+		<class>com.impetus.ankush.common.domain.Configuration</class>
+		<class>com.impetus.ankush.common.domain.Event</class>
+		<class>com.impetus.ankush.common.domain.AppConf</class>
+		<class>com.impetus.ankush.common.domain.EventHistory</class>
+		<class>model.Category</class>
+		<class>model.CategoryDescription</class>
+		<class>model.Content</class>
+		<class>model.ContentDescription</class>
+		<class>model.Country</class>
+		<class>model.CountryDescription</class>
+		<class>model.Currency</class>
+		<class>model.Customer</class>
+		<class>model.CustomerAttribute</class>
+		<class>model.CustomerOptValDescription</class>
+		<class>model.CustomerOption</class>
+		<class>model.CustomerOptionDesc</class>
+		<class>model.CustomerOptionSet</class>
+		<class>model.CustomerOptionValue</class>
+		<class>model.FileHistory</class>
+		<class>model.Geozone</class>
+		<class>model.GeozoneDescription</class>
+		<class>model.Language</class>
+		<class>model.Manufacturer</class>
+		<class>model.ManufacturerDescription</class>
+		<class>model.MerchantConfiguration</class>
+		<class>model.MerchantLog</class>
+		<class>model.MerchantStore</class>
+		<class>model.ModuleConfiguration</class>
+		<class>model.OrderAccount</class>
+		<class>model.OrderAccountProduct</class>
+		<class>model.OrderProduct</class>
+		<class>model.OrderProductAttribute</class>
+		<class>model.OrderProductDownload</class>
+		<class>model.OrderProductPrice</class>
+		<class>model.OrderStatusHistory</class>
+		<class>model.OrderTotal</class>
+		<class>model.Order</class>
+		<class>model.Permission</class>
+		<class>model.Product</class>
+		<class>model.ProductAttribute</class>
+		<class>model.ProductAvailability</class>
+		<class>model.ProductDescription</class>
+		<class>model.ProductDigital</class>
+		<class>model.ProductImage</class>
+		<class>model.ProductImageDescription</class>
+		<class>model.ProductOption</class>
+		<class>model.ProductOptionDesc</class>
+		<class>model.ProductOptionValue</class>
+		<class>model.ProductOptionValueDescription</class>
+		<class>model.ProductPrice</class>
+		<class>model.ProductPriceDescription</class>
+		<class>model.ProductRelationship</class>
+		<class>model.ProductReview</class>
+		<class>model.ProductReviewDescription</class>
+		<class>model.ProductType</class>
+		<class>model.ShoppingCart</class>
+		<class>model.ShoppingCartAttrItem</class>
+		<class>model.ShoppingCartItem</class>
+		<class>model.SmGroup</class>
+		<class>model.SmSequencer</class>
+		<class>model.SmTransaction</class>
+		<class>model.SystemConfiguration</class>
+		<class>model.SystemNotification</class>
+		<class>model.TaxClass</class>
+		<class>model.TaxRate</class>
+		<class>model.TaxRateDescription</class>
+		<class>model.User</class>
+		<class>model.Zone</class>
+		<class>model.ZoneDescription</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+	</persistence-unit>
+
+</persistence>
